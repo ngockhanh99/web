@@ -1,0 +1,31 @@
+RewriteEngine on
+
+RewriteBase /BookStore/
+
+RewriteRule ^login$ login.php [QSA,L]
+RewriteRule ^login-([a-zA-Z0-9_-]+)$ login.php?dn=$1 [QSA,L]
+
+RewriteRule ^book-store$ index.php [QSA,L]
+RewriteRule ^book-store-([a-zA-Z0-9_-]+)-([0-9]+)-([a-zA-Z0-9_-]+)$ ?cn=home&method=$1&id=$2&page=$3 [QSA,L]
+RewriteRule ^book-store-([a-zA-Z0-9_-]+)-([0-9]+)$ ?cn=home&method=$1&id=$2 [QSA,L]
+RewriteRule ^book-store-([a-zA-Z0-9_-]+)$ ?cn=home&method=$1 [QSA,L]
+
+RewriteRule ^gio-hang$ ?cn=giohang
+RewriteRule ^gio-hang-([a-zA-Z0-9_-]+)-([0-9]+)$ ?cn=giohang&method=$1&id=$2 [QSA,L]
+RewriteRule ^gio-hang-([a-zA-Z0-9_-]+)$ ?cn=giohang&method=$1 [QSA,L]
+
+RewriteRule ^login_admin$ admin/login.php [QSA,L]
+RewriteRule ^login_admin-([a-zA-Z0-9_-]+)$ admin/login.php?dn=$1 [QSA,L]
+
+RewriteRule ^admin.html$ admin/admin.php [QSA,L]
+
+RewriteRule ^admin-([a-zA-Z0-9_-]+)-([a-zA-Z0-9_-]+)-([a-zA-Z0-9_-]+)-([a-zA-Z0-9_-]+)$ admin/admin.php?sk=$1&method=$2&page=$3&id=$4 [QSA,L]
+RewriteRule ^admin-([a-zA-Z0-9_-]+)-([a-zA-Z0-9_-]+)-([a-zA-Z0-9_-]+)$ admin/admin.php?sk=$1&method=$2&page=$3 [QSA,L]
+
+RewriteRule ^admin-([a-zA-Z0-9_-]+)$ admin/admin.php?sk=$1 [QSA,L]
+
+
+#RewriteRule ^(.+)/(.+)/([0-9]+)$ ?cn=$1/$2/$3 [QSA,L]
+#RewriteRule ^(.*+)/(.*+)/([0-9+])$ ?cn=$1&method=$2&id_them=$3 [QSA,L]
+#RewriteRule ^san-pham/([a-zA-Z0-9_-]+)-([0-9]+).html$ ?page=ct&id=$2
+#RewriteRule ^trang/([0-9+])$ page.php?id=$1
