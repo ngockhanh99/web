@@ -235,7 +235,7 @@ CREATE TABLE `taikhoan` (
 --
 
 INSERT INTO `taikhoan` (`id_tk`, `TenDangNhap`, `MatKhau`, `TenHienThi`, `DiaChi`, `SDT`, `Email`, `Quyen`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Admin', 'Hà Nội', '01213111994', 'vudinhminh9x@gmail.com', 1),
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Admin', 'Nam Định', '0857598456', 'ngockhanhnt.99@gmail.com', 1),
 
 
 --
